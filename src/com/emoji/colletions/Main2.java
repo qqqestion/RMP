@@ -5,7 +5,7 @@ import java.util.*;
 public class Main2<E> {
 
     public static void main(String[] args) {
-        List<Integer> intElements = new ArrayList<>(List.of(1, 2, 3, 4, 5));
+        List<Integer> intElements = new ArrayList<>(List.of(1, 2, 3, 4, 5, 1));
         Set<Integer> uniqueIntElements = new Main2<Integer>().deleteRepeated(intElements);
         System.out.println(Arrays.toString(uniqueIntElements.toArray()));
 
