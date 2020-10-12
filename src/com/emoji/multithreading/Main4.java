@@ -1,10 +1,14 @@
 package com.emoji.multithreading;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Main4 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Manager manager = new Manager();
         Thread thread1 = new NewThread(manager);
         Thread thread2 = new NewThread(manager);
