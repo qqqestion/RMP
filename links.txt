@@ -1,8 +1,7 @@
-https://densegodnya.ru/thumb/2/6tPLFVRe15LzdVjf9qnvNg/r/d/malenkiy_muravyed.jpg picture.jpg
-https://i0.wp.com/ianimal.ru/wp-content/uploads/2012/02/PALESTRO.jpg one_more_picture.jpg
-https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-zip-file.zip light_zip.zip
-https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-large-zip-file.zip heavy_zip.zip
-https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-large-zip-file.zip heavy_zip1.zip
-https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-large-zip-file.zip heavy_zip2.zip
-https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-large-zip-file.zip heavy_zip3.zip
-https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-large-zip-file.zip heavy_zip4.zip
+https://file-examples-com.github.io/uploads/2017/02/file_example_CSV_5000.csv 7kb.csv
+https://file-examples-com.github.io/uploads/2017/02/file_example_JSON_1kb.json 1kb.json
+https://file-examples-com.github.io/uploads/2017/02/zip_2MB.zip 2mb.zip
+https://file-examples-com.github.io/uploads/2017/02/zip_5MB.zip 5mb.zip
+https://file-examples-com.github.io/uploads/2017/02/zip_10MB.zip 10mb.zip
+https://file-examples-com.github.io/uploads/2017/11/file_example_WAV_10MG.wav 10mb.wav
+https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4 18mb.mp4

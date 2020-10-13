@@ -13,10 +13,12 @@ import java.util.Set;
 public class DownloadThread extends Thread {
     private Map<String, Set<String>> linksMap;
     private String uploadDirectory;
+    private Downloader downloader;
 
-    public DownloadThread(Map<String, Set<String>> linksMap, String uploadDirectory) {
+    public DownloadThread(Map<String, Set<String>> linksMap, String uploadDirectory, Downloader downloader) {
         this.linksMap = linksMap;
         this.uploadDirectory = uploadDirectory;
+        this.downloader = downloader;
     }
 
     public void downloadFile(URL fileToDownloadURL, File fileToSave) throws IOException {
@@ -34,8 +36,10 @@ public class DownloadThread extends Thread {
             totalBytesNumber += bytesRead;
             fileOutputStream.write(dataBuffer, 0, bytesRead);
         }
+        downloader.setBytesCount(downloader.getBytesCount() + totalBytesNumber);
+        downloader.incrementFileCount();
         double totalTimeInSeconds = (System.nanoTime() - start) * 1.0 / 1000000000;
-        System.out.println("Downloaded: " + fileToSave.getName() + " -> " + totalBytesNumber + " bytes in " + String.format("%.3f", totalTimeInSeconds) + " seconds");
+        System.out.println("Downloaded: " + fileToSave.getName() + " -> " + Downloader.convertBytes(totalBytesNumber) + " bytes in " + String.format("%.3f", totalTimeInSeconds) + " seconds");
     }
 
     public void copyFile(File origin, File fileToCopy) {
@@ -56,9 +60,11 @@ public class DownloadThread extends Thread {
             }
         } catch (IOException exp) {
             exp.printStackTrace();
+            return;
         }
+        downloader.incrementFileCount();
         double totalTimeInSeconds = (System.nanoTime() - start) * 1.0 / 1000000000;
-        System.out.println("Downloaded: " + fileToCopy.getName() + " -> " + totalBytesNumber + " bytes in " + String.format("%.3f", totalTimeInSeconds) + " seconds");
+        System.out.println("Downloaded: " + fileToCopy.getName() + " -> " + Downloader.convertBytes(totalBytesNumber) + " in " + String.format("%.3f", totalTimeInSeconds) + " seconds");
     }
 
     @Override

@@ -43,6 +43,5 @@ public class Main {
         }
         Downloader fileDownloader = new Downloader(linksList, parsedArgs.get("--out"));
         fileDownloader.startDownload(Integer.parseInt(parsedArgs.get("-n")));
-        System.out.println(linksList);
     }
 }
